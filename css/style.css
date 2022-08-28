@@ -290,8 +290,7 @@ img {
 .social {
   display: flex;
 }
-.social-item {
-}
+
 .social-item + .social-item {
   margin-left: 10px;
 }
@@ -325,12 +324,12 @@ img {
 
 /* Subscribe */
 
-.form {
+.form-footer {
   display: flex;
   align-items: center;
 }
 
-.form-field {
+.form-footer-field {
   margin-right: 12px;
 }
 
@@ -827,11 +826,16 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-  transition: border-color 250ms var(--timing-fucnction);
+  transition: border-color 250ms var(--timing-fucnction),
+    background-color 200ms var(--timing-fucnction);
 }
 
 .modal-close:hover .icon-close {
   fill: var(--activ-color-blue);
+}
+
+.modal-close:active {
+  background-color: #188ce8;
 }
 
 .icon-close {
@@ -850,11 +854,11 @@ img {
 .form-modal {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .form-modal-group {
   display: flex;
   flex-direction: column;
-  width: 100%;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -862,7 +866,6 @@ img {
 .form-field-modal {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 .form-label {
   font-size: 12px;
@@ -870,12 +873,33 @@ img {
   margin-bottom: 4px;
   letter-spacing: 0.01em;
 }
+
+.icon-position {
+  position: relative;
+}
+
 .form-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   background-color: transparent;
   height: 40px;
-  padding: 11px 12px;
+  padding: 12px 42px;
+  width: 100%;
+}
+
+.form-input:focus + .icon-form {
+  fill: var(--activ-color-blue);
+}
+
+.icon-form {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  fill: var(--titel-color-text);
+
+  transition: fill 300ms var(--timing-fucnction);
 }
 
 .form-textarea {
@@ -885,20 +909,18 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-
-  color: rgba(117, 117, 117, 0.5);
+  resize: none;
 }
 
 .form-textarea::placeholder {
   font-size: 12px;
   line-height: 1.1666;
   letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .form-field-checkbox {
   margin-bottom: 30px;
-}
-.input-checkbox {
 }
 
 .label-chackbox {
