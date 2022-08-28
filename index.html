@@ -23,7 +23,7 @@
   <body>
     <!--Head-->
     <header class="page-header">
-      <div class="container flex-nav">
+      <div class="container flex-header">
         <nav class="nav">
           <a class="logo" href="./index.html"
             ><span class="web">Web</span>Studio</a
@@ -607,6 +607,27 @@
             </li>
           </ul>
         </div>
+
+        <div class="subscribe-box">
+          <h2 class="title-subscribe">Підпишіться на розсилку</h2>
+          <form class="form js-speaker-form">
+            <div class="form-field">
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                required
+                class="subscribe-email"
+              />
+            </div>
+            <button class="btn-subscribe">
+              Підписатися
+              <svg class="icon-subscribe" width="24px" height="24px">
+                <use href="./images/symbol-defs.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-backdrop>
@@ -616,8 +637,57 @@
             <use href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
+        <h2 class="title-modal">Залиште свої дані, ми вам передзвонимо</h2>
+        <form class="form-modal js-speaker-form">
+          <div class="form-modal-group">
+            <div class="form-field-modal">
+              <label for="name" class="form-label">Ім'я</label>
+              <input type="text" name="name" id="name" class="form-input" />
+            </div>
+            <div class="form-field-modal">
+              <label for="tel" class="form-label">Телефон</label>
+              <input type="tel" name="tel" id="tel" class="form-input" />
+            </div>
+            <div class="form-field-modal">
+              <label for="email" class="form-label">Пошта</label>
+              <input type="email" name="email" id="email" class="form-input" />
+            </div>
+            <div class="form-field-modal">
+              <label for="comment" class="form-label">Коментар</label>
+              <textarea
+                name="comment"
+                id="comment"
+                rows="5"
+                placeholder="Введіть текст"
+                class="form-textarea"
+              >
+              </textarea>
+            </div>
+          </div>
+          <div class="form-field-checkbox">
+            <input class="input-checkbox" type="checkbox"  id="checkbox" name="user-agree"/>
+            <label class="label-chackbox" for="checkbox"
+              >Погоджуюся з розсилкою та приймаю
+              <a href="" class="label-link">Умови договору</a></label
+            >
+          </div>
+          <button type="submit" class="btn-send">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+          });
+      })();
+    </script>
   </body>
 </html>
