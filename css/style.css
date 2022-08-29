@@ -318,11 +318,12 @@ img {
   fill: currentColor;
 }
 
+/* Subscribe */
+
 .subscribe-box {
   margin-left: 93px;
 }
 
-/* Subscribe */
 
 .form-footer {
   display: flex;
@@ -360,7 +361,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  min-width: 200px;
   padding: 10px 28px;
   height: 50px;
 
@@ -861,11 +862,15 @@ img {
   letter-spacing: 0.03em;
   margin-bottom: 12px;
 }
+
+/* form */
+
 .form-modal {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .form-fieldset {
   display: flex;
   flex-direction: column;
@@ -877,6 +882,7 @@ img {
   display: flex;
   flex-direction: column;
 }
+
 .form-label {
   font-size: 12px;
   line-height: 1.1666;
@@ -994,8 +1000,8 @@ img {
 }
 
 .btn-send {
-  min-width: 200px;
-  padding: 10px;
+  width: 200px;
+  padding: 10px 28px;
   border: none;
 
   font-weight: 700;
