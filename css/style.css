@@ -324,7 +324,6 @@ img {
   margin-left: 93px;
 }
 
-
 .form-footer {
   display: flex;
   align-items: center;
@@ -450,6 +449,10 @@ img {
 
 .flex-features {
   display: flex;
+}
+
+.item-features {
+  width: 270px;
 }
 
 .item-features:not(:last-child) {
