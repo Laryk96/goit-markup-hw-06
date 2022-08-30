@@ -2,12 +2,15 @@
 
 :root {
   /* header Height */
-
   --header-height: 80px;
 
   /* Шрифты */
   --font-logo-raleway: "Raleway", sans-serif;
   --font-main: "Roboto", sans-serif;
+
+  /* Сетка */
+  --items: 3;
+  --indent: 30px;
 
   /* Text Color */
   --main-color-text: #757575;
@@ -175,14 +178,15 @@ img {
   position: relative;
   color: var(--activ-color-blue);
 }
+
 .current::after {
   content: "";
+  display: block;
   width: 100%;
   height: 4px;
   position: absolute;
   left: 0;
-  top: 17px;
-  transform: translateY(28px);
+  top: 45px;
 
   background-color: var(--activ-color-blue);
   border-radius: 2px;
@@ -696,24 +700,13 @@ img {
 .projects {
   display: flex;
   flex-wrap: wrap;
-
-  /* gap: 30px; */
+  gap: var(--indent);
 }
 
 .project-card {
-  width: calc((100% - 15 * 2) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 
   background-color: var(--white-color);
-}
-
-/* Сетка */
-.project-card:nth-child(3n) {
-  margin-right: 0px;
-}
-.project-card:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
 }
 
 .project-link {
@@ -905,11 +898,11 @@ img {
   padding: 12px 42px;
   width: 100%;
 
-  transition: outline 250ms var(--timing-fucnction);
+  transition: border-color 250ms var(--timing-fucnction);
 }
 
 .form-input:focus {
-  outline: 1px solid var(--activ-color-blue);
+  border-color: var(--activ-color-blue);
 }
 
 .form-input:focus + .icon-form {
@@ -940,7 +933,7 @@ img {
 }
 
 .form-textarea:focus {
-  outline: 1px solid var(--activ-color-blue);
+  border-color: var(--activ-color-blue);
 }
 
 .form-textarea::placeholder {
@@ -993,7 +986,7 @@ img {
   width: 16px;
   height: 15px;
   margin-right: 8px;
-  border: 1px solid var(--titel-color-text);
+  border: 2px solid var(--titel-color-text);
   border-radius: 2px;
 
   cursor: pointer;
