@@ -1,4 +1,8 @@
-/* Global settings */
+/**
+  |============================
+  | Global settings 
+  |============================
+*/
 
 :root {
   /* header Height */
@@ -34,7 +38,11 @@
   --timing-fucnction: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Стандартные стили */
+/**
+  |============================
+  | Стандартные стили
+  |============================
+*/
 
 body {
   color: var(--main-color-text);
@@ -98,9 +106,13 @@ img {
 .contact-footer-link:focus {
   color: var(--activ-color-blue);
 }
-/* Animation */
 
-/* header */
+
+/**
+  |============================
+  | header 
+  |============================
+*/
 .page-header {
   position: fixed;
   top: 0;
@@ -228,7 +240,11 @@ img {
   fill: currentColor;
 }
 
-/* Footer */
+/**
+  |============================
+  | Footer
+  |============================
+*/
 
 .footer {
   padding-top: 60px;
@@ -387,7 +403,11 @@ img {
   fill: currentColor;
 }
 
-/* Main */
+/**
+  |============================
+  | Main
+  |============================
+*/
 
 .hero-section {
   max-width: 1600px;
@@ -650,7 +670,11 @@ img {
   fill: currentColor;
 }
 
-/* 2 Main Portfolio */
+/**
+  |============================
+  | 2 Main Portfolio
+  |============================
+*/
 
 /* filter */
 .filter.list {
@@ -1014,3 +1038,4 @@ img {
 .btn-send:active {
   background-color: #188ce8;
 }
+
